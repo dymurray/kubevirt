@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "regmask.go",
+        "regmask_386.go",
+    ],
+    importmap = "kubevirt.io/kubevirt/vendor/github.com/klauspost/compress/internal/regmask",
+    importpath = "github.com/klauspost/compress/internal/regmask",
+    visibility = ["//vendor/github.com/klauspost/compress:__subpackages__"],
+)
